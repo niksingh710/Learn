@@ -43,7 +43,7 @@ class TicTacToe:
     def make_move(self, pos, letter):
         # Does to move on the board as the pos argument
         if self.board[pos] == ' ':
-            self.board[pos] = ' '
+            self.board[pos] = letter
             if self.check_win(pos, letter):
                 self.winner = letter
             return True
