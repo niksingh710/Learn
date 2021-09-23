@@ -1,0 +1,20 @@
+{
+  "name": "Nexter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "compile:css": "node-sass ./sass/main.scss ./css/main.comp.css",
+    "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' ./css/main.comp.css -o ./css/main.prefix.css",
+    "compress:css": "node-sass ./css/main.prefix.css ./css/main.comp.css --output-style compressed"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.2.1",
+    "node-sass": "^5.0.0",
+    "postcss": "^8.2.4",
+    "postcss-cli": "^8.3.1"
+  }
+}

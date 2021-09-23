@@ -1,0 +1,1043 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HomePage</title>
+    <style>
+        *,
+        :after,
+        :before {
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: rgba(179, 225, 241, 0.55);
+            margin: 0;
+            overflow: hidden;
+            position: relative;
+        }
+
+
+        @-webkit-keyframes bounce {
+
+            0%,
+            20%,
+            50%,
+            80%,
+            100% {
+                -webkit-transform: translateY(0);
+                -ms-transform: translateY(0);
+                -o-transform: translateY(0);
+                transform: translateY(0);
+            }
+
+            40% {
+                -webkit-transform: translateY(-10px);
+                -ms-transform: translateY(-10px);
+                -o-transform: translateY(-10px);
+                transform: translateY(-10px);
+            }
+
+            60% {
+                -webkit-transform: translateY(-5px);
+                -ms-transform: translateY(-5px);
+                -o-transform: translateY(-5px);
+                transform: translateY(-5px);
+            }
+        }
+
+        @-moz-keyframes bounce {
+
+            0%,
+            20%,
+            50%,
+            80%,
+            100% {
+                -webkit-transform: translateY(0);
+                -ms-transform: translateY(0);
+                -o-transform: translateY(0);
+                transform: translateY(0);
+            }
+
+            40% {
+                -webkit-transform: translateY(-10px);
+                -ms-transform: translateY(-10px);
+                -o-transform: translateY(-10px);
+                transform: translateY(-10px);
+            }
+
+            60% {
+                -webkit-transform: translateY(-5px);
+                -ms-transform: translateY(-5px);
+                -o-transform: translateY(-5px);
+                transform: translateY(-5px);
+            }
+        }
+
+        @-o-keyframes bounce {
+
+            0%,
+            20%,
+            50%,
+            80%,
+            100% {
+                -webkit-transform: translateY(0);
+                -ms-transform: translateY(0);
+                -o-transform: translateY(0);
+                transform: translateY(0);
+            }
+
+            40% {
+                -webkit-transform: translateY(-10px);
+                -ms-transform: translateY(-10px);
+                -o-transform: translateY(-10px);
+                transform: translateY(-10px);
+            }
+
+            60% {
+                -webkit-transform: translateY(-5px);
+                -ms-transform: translateY(-5px);
+                -o-transform: translateY(-5px);
+                transform: translateY(-5px);
+            }
+        }
+
+        @keyframes bounce {
+
+            0%,
+            20%,
+            50%,
+            80%,
+            100% {
+                -webkit-transform: translateY(0);
+                -ms-transform: translateY(0);
+                -o-transform: translateY(0);
+                transform: translateY(0);
+            }
+
+            40% {
+                -webkit-transform: translateY(-10px);
+                -ms-transform: translateY(-10px);
+                -o-transform: translateY(-10px);
+                transform: translateY(-10px);
+            }
+
+            60% {
+                -webkit-transform: translateY(-5px);
+                -ms-transform: translateY(-5px);
+                -o-transform: translateY(-5px);
+                transform: translateY(-5px);
+            }
+        }
+
+        .bamboo-wrap {
+            width: 100%;
+            height: 100vh;
+        }
+
+        .bamboo-wrap:before {
+            background: #0bca0d;
+            content: '';
+            bottom: 0;
+            height: 150px;
+            position: absolute;
+            width: 100%;
+            z-index: 3;
+        }
+
+        .bamboo-block {
+            bottom: 0;
+            left: 0;
+            position: absolute;
+            top: 0;
+            width: 25%;
+        }
+
+        .bamboo {
+            background: #77d002;
+            box-shadow: inset 1px 1px 7px #5c9e05;
+            height: 100%;
+            position: absolute;
+            width: 15px;
+        }
+
+        .bamboo span {
+            border-bottom: 3px solid #3E4735;
+            border-radius: 100%;
+            height: 9px;
+            position: absolute;
+            top: 5%;
+            width: 15px;
+        }
+
+        .bamboo span+span {
+            top: 30%;
+        }
+
+        .bamboo span+span+span {
+            top: 55%;
+        }
+
+        .bamboo span+span+span+span {
+            top: 80%;
+        }
+
+        .bamboo.skew-lt {
+            -webkit-transform: skew(-5deg);
+            -ms-transform: skew(-5deg);
+            -o-transform: skew(-5deg);
+            transform: skew(-5deg);
+        }
+
+        .bamboo.skew-lt span {
+            top: 10%;
+        }
+
+        .bamboo.skew-lt span+span {
+            top: 35%;
+        }
+
+        .bamboo.skew-lt span+span+span {
+            top: 60%;
+        }
+
+        .bamboo.skew-lt span+span+span+span {
+            top: 85%;
+        }
+
+        .bamboo.skew-rt {
+            -webkit-transform: skew(5deg);
+            -ms-transform: skew(5deg);
+            -o-transform: skew(5deg);
+            transform: skew(5deg);
+        }
+
+        .bamboo.skew-rt span {
+            top: 15%;
+        }
+
+        .bamboo.skew-rt span+span {
+            top: 40%;
+        }
+
+        .bamboo.skew-rt span+span+span {
+            top: 65%;
+        }
+
+        .bamboo.skew-rt span+span+span+span {
+            top: 90%;
+        }
+
+        .panda {
+            bottom: 50px;
+            height: 470px;
+            left: 50%;
+            margin-left: -225px;
+            position: absolute;
+            width: 450px;
+        }
+
+        /*.panda:before{
+	background: url(panda.jpg) no-repeat scroll 0 0;
+	content: '';
+	height: 100%;
+	position: absolute;
+	width: 100%;
+}*/
+
+        .head-wrap {
+            height: 268px;
+            margin: 0 auto;
+            position: relative;
+            width: 285px;
+            z-index: 5;
+        }
+
+        .ear {
+            background: #000000;
+            border-radius: 100%;
+            display: inline-block;
+            height: 80px;
+            position: absolute;
+            top: 22px;
+            width: 80px;
+
+            -webkit-animation: bounce 1s ease-in-out 1.5s infinite forwards;
+            -moz-animation: bounce 1s ease-in-out 1.5s infinite forwards;
+            -o-animation: bounce 1s ease-in-out 1.5s infinite forwards;
+            animation: bounce 1s ease-in-out 1.5s infinite forwards;
+        }
+
+        .ear.lt-ear {
+            left: -22px;
+        }
+
+        .ear.rt-ear {
+            right: -22px;
+        }
+
+        .ear:before {
+            background: #ffffff;
+            border-radius: 100%;
+            bottom: 20px;
+            content: '';
+            height: 35px;
+            position: absolute;
+            width: 35px;
+        }
+
+        .ear.lt-ear:before {
+            right: 20px;
+        }
+
+        .ear.rt-ear:before {
+            left: 20px;
+        }
+
+        .face {
+            background: #ffffff;
+            border: 3px solid #000000;
+            border-radius: 100%;
+            height: 250px;
+            left: 50%;
+            margin-left: -49%;
+            position: absolute;
+            top: 18px;
+            width: 98%;
+        }
+
+        .face:before {
+            background: #ffffff;
+            border-radius: 100%;
+            bottom: 70px;
+            content: '';
+            height: 100px;
+            left: 50%;
+            margin-left: -47%;
+            position: absolute;
+            width: 94%;
+            z-index: 1;
+        }
+
+        .face:after {
+            background: #ffffff;
+            border: 3px solid #000000;
+            border-radius: 100%;
+            bottom: -3px;
+            content: '';
+            height: 148px;
+            left: 50%;
+            margin-left: -147px;
+            position: absolute;
+            width: 294px;
+        }
+
+        .eye {
+            background: #000000;
+            border-radius: 50% / 60% 60% 40% 40%;
+            height: 150px;
+            position: absolute;
+            top: 53px;
+            width: 85px;
+            z-index: 2;
+        }
+
+        .eye.lt-eye {
+            left: 42px;
+
+            -webkit-transform: rotate(24deg);
+            -ms-transform: rotate(24deg);
+            -o-transform: rotate(24deg);
+            transform: rotate(24deg);
+        }
+
+        .eye.rt-eye {
+            right: 42px;
+
+            -webkit-transform: rotate(-24deg);
+            -ms-transform: rotate(-24deg);
+            -o-transform: rotate(-24deg);
+            transform: rotate(-24deg);
+        }
+
+        .eye .pupil {
+            background: #ffffff;
+            border-radius: 100%;
+            bottom: 28px;
+            height: 60px;
+            position: absolute;
+            right: -5px;
+            width: 60px;
+        }
+
+        .eye.rt-eye .pupil {
+            left: -5px;
+            right: auto;
+        }
+
+        .eye .pupil:before {
+            background: #000000;
+            border-radius: 100%;
+            bottom: 3px;
+            content: '';
+            height: 45px;
+            position: absolute;
+            right: 5px;
+            width: 45px;
+        }
+
+        .eye.rt-eye .pupil:before {
+            left: 5px;
+            right: auto;
+        }
+
+        .eye .pupil:after {
+            background: #ffffff;
+            border-radius: 100%;
+            content: '';
+            height: 20px;
+            position: absolute;
+            right: 15px;
+            top: 8px;
+            width: 20px;
+        }
+
+        .eye.rt-eye .pupil:after {
+            left: 15px;
+            right: auto;
+        }
+
+        .nose {
+            background: #000000;
+            border-radius: 100px 100px 150px 150px;
+            bottom: 21%;
+            height: 35px;
+            left: 50%;
+            margin-left: -22px;
+            position: absolute;
+            width: 44px;
+            z-index: 10;
+        }
+
+        .nose:before {
+            box-shadow: -5px -3px 0 0 #ffffff;
+            border-radius: 50%;
+            content: '';
+            height: 10px;
+            left: 14px;
+            position: absolute;
+            top: 10px;
+            width: 30px;
+        }
+
+        .nose:after {
+            background: #000000;
+            border-radius: 100%;
+            bottom: -18px;
+            content: '';
+            height: 18px;
+            left: 50%;
+            margin-left: -1.5px;
+            position: absolute;
+            width: 3px;
+        }
+
+        .mouth {
+            box-shadow: 0 3px 0 0 #000000;
+            border-radius: 100%;
+            bottom: 38px;
+            height: 15px;
+            left: 50%;
+            margin-left: -16px;
+            position: absolute;
+            width: 34px;
+        }
+
+        .body-wrap {
+            background: #000000;
+            border-radius: 50%;
+            height: 200px;
+            margin: -50px auto auto;
+            position: relative;
+            width: 285px;
+            z-index: 4;
+        }
+
+        .body-wrap:before {
+            background: #ffffff;
+            border-radius: 95px 95px 95px 95px;
+            content: '';
+            height: 198px;
+            left: 50%;
+            margin-left: -100px;
+            position: absolute;
+            top: 0;
+            width: 200px;
+        }
+
+        .leg {
+            background: #ffffff;
+            border-radius: 50% / 40% 40% 55% 55%;
+            bottom: 40px;
+            height: 130px;
+            position: absolute;
+            width: 98px;
+            z-index: 5;
+        }
+
+        .leg.lt-leg {
+            left: 80px;
+
+            -webkit-transform: rotate(-45deg);
+            -ms-transform: rotate(-45deg);
+            -o-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+        }
+
+        .leg.rt-leg {
+            right: 80px;
+
+            -webkit-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            -o-transform: rotate(45deg);
+            transform: rotate(45deg);
+        }
+
+        .leg:before {
+            background: #000000;
+            border-radius: 50% / 40% 40% 55% 55%;
+            content: '';
+            height: 130px;
+            left: 0;
+            position: absolute;
+            top: 3px;
+            width: 98px;
+        }
+
+        .paws {
+            background: #ffffff;
+            border-radius: 50% / 60% 60% 50% 50%;
+            bottom: 15px;
+            height: 55px;
+            left: 50%;
+            margin-left: -25px;
+            position: absolute;
+            width: 50px;
+        }
+
+        .paws:before,
+        .paws:after {
+            background: #ffffff;
+            border-radius: 50% / 50% 50% 40% 40%;
+            content: '';
+            height: 18px;
+            left: -10px;
+            position: absolute;
+            top: -32px;
+            width: 20px;
+        }
+
+        .paws:after {
+            box-shadow: 28px 14px 0 #ffffff;
+            left: 50%;
+            margin-left: -10px;
+            top: -44px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bamboo-wrap">
+
+        <div class="bamboo-block">
+            <div class="bamboo b-0" style="left: 5%;">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <div class="bamboo b-1 skew-lt" style="left: 6%;">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <div class="bamboo b-2 skew-lt" style="left: 14%;">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <div class="bamboo b-3 skew-rt" style="left: 25%;">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <div class="bamboo b-4 skew-lt" style="left: 23%;">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <div class="bamboo b-5 " style="left: 40%;">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <div class="bamboo b-6 skew-rt" style="left: 55%;">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <div class="bamboo b-7 " style="left: 59%;">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <div class="bamboo b-8 skew-lt" style="left: 46%;">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <div class="bamboo b-9 skew-lt" style="left: 63%;">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <div class="bamboo b-10 skew-lt" style="left: 80%;">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <div class="bamboo b-11 skew-rt" style="left: 85%;">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <div class="bamboo b-12 skew-rt" style="left: 90%;">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <div class="bamboo b-13" style="left: 95%;">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <div class="bamboo b-14 skew-lt" style="left: 70%;">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <div class="bamboo b-15 skew-lt" style="left: 95%;">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+
+        <div class="bamboo-block" style="left: 25%;">
+            <div class="bamboo b-0" style="left: 5%;">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <div class="bamboo b-1 skew-lt" style="left: 6%;">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <div class="bamboo b-2 skew-lt" style="left: 14%;">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <div class="bamboo b-3 skew-rt" style="left: 25%;">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <div class="bamboo b-4 skew-lt" style="left: 23%;">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <div class="bamboo b-5 " style="left: 40%;">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <div class="bamboo b-6 skew-rt" style="left: 55%;">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <div class="bamboo b-7 " style="left: 59%;">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <div class="bamboo b-8 skew-lt" style="left: 46%;">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <div class="bamboo b-9 skew-lt" style="left: 63%;">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <div class="bamboo b-10 skew-lt" style="left: 80%;">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <div class="bamboo b-11 skew-rt" style="left: 85%;">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <div class="bamboo b-12 skew-rt" style="left: 90%;">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <div class="bamboo b-13" style="left: 95%;">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <div class="bamboo b-14 skew-lt" style="left: 70%;">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <div class="bamboo b-15 skew-lt" style="left: 95%;">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+
+        <div class="bamboo-block" style="left: 50%;">
+            <div class="bamboo b-0" style="left: 5%;">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <div class="bamboo b-1 skew-lt" style="left: 6%;">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <div class="bamboo b-2 skew-lt" style="left: 14%;">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <div class="bamboo b-3 skew-rt" style="left: 25%;">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <div class="bamboo b-4 skew-lt" style="left: 23%;">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <div class="bamboo b-5 " style="left: 40%;">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <div class="bamboo b-6 skew-rt" style="left: 55%;">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <div class="bamboo b-7 " style="left: 59%;">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <div class="bamboo b-8 skew-lt" style="left: 46%;">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <div class="bamboo b-9 skew-lt" style="left: 63%;">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <div class="bamboo b-10 skew-lt" style="left: 80%;">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <div class="bamboo b-11 skew-rt" style="left: 85%;">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <div class="bamboo b-12 skew-rt" style="left: 90%;">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <div class="bamboo b-13" style="left: 95%;">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <div class="bamboo b-14 skew-lt" style="left: 70%;">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <div class="bamboo b-15 skew-lt" style="left: 95%;">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+
+        <div class="bamboo-block" style="left: 75%;">
+            <div class="bamboo b-0" style="left: 5%;">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <div class="bamboo b-1 skew-lt" style="left: 6%;">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <div class="bamboo b-2 skew-lt" style="left: 14%;">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <div class="bamboo b-3 skew-rt" style="left: 25%;">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <div class="bamboo b-4 skew-lt" style="left: 23%;">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <div class="bamboo b-5 " style="left: 40%;">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <div class="bamboo b-6 skew-rt" style="left: 55%;">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <div class="bamboo b-7 " style="left: 59%;">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <div class="bamboo b-8 skew-lt" style="left: 46%;">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <div class="bamboo b-9 skew-lt" style="left: 63%;">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <div class="bamboo b-10 skew-lt" style="left: 80%;">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <div class="bamboo b-11 skew-rt" style="left: 85%;">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <div class="bamboo b-12 skew-rt" style="left: 90%;">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <div class="bamboo b-13" style="left: 95%;">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <div class="bamboo b-14 skew-lt" style="left: 70%;">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <div class="bamboo b-15 skew-lt" style="left: 95%;">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="panda">
+        <div class="head-wrap">
+            <div class="ear lt-ear"></div>
+            <div class="ear rt-ear"></div>
+            <div class="face"></div>
+            <div class="eye lt-eye">
+                <span class="pupil"></span>
+            </div>
+
+            <div class="eye rt-eye">
+                <span class="pupil"></span>
+            </div>
+
+            <div class="nose"></div>
+            <div class="mouth"></div>
+
+        </div>
+        <div class="body-wrap"></div>
+        <div class="leg lt-leg">
+            <span class="paws"></span>
+        </div>
+        <div class="leg rt-leg">
+            <span class="paws"></span>
+        </div>
+    </div>
+</body>
+
+</html>

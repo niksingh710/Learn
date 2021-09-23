@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+* {
+  box-sizing: boder-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+html body {
+  font-size: 1.6rem;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://images.unsplash.com/photo-1467810563316-b5476525c0f9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1349&q=80");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  color: #fff;
+  font-family: 'Lato', sans-serif;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 0;
+  overflow: hidden;
+}
+
+h1 {
+  font-size: 6rem;
+  margin: -8rem 0 4rem;
+}
+
+.countdown {
+  display: none;
+  transform: scale(2);
+}
+
+.countdown .time {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1.5rem;
+}
+
+.countdown .time h2 {
+  margin: 0 0 .5rem;
+}
+
+.year {
+  font-size: 20rem;
+  z-index: -1;
+  position: absolute;
+  opacity: .1;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.year--next {
+  bottom: 2rem;
+}
+
+.year--prev {
+  top: 2rem;
+}
+
+@media (max-width: 500px) {
+  .time {
+    margin: .5rem;
+  }
+  .time h2 {
+    font-size: 1.2rem;
+    margin: 0;
+  }
+  .time small {
+    font-size: 1rem;
+  }
+  h1 {
+    font-size: 4.5rem;
+  }
+}

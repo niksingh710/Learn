@@ -1,3 +1,3 @@
-# Python Basic Projects
-Basic Python Work done while polishing my skills.
+# Learning Basic Projects
+These are all my mini projects containing JAVA GUIs to OOPs to API Handling with heavy algorithm and Web pages.
 

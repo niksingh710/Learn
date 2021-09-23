@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+html body {
+  font-size: 1.6rem;
+  font-family: 'Lato', sans-serif;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100vh;
+  margin: 0;
+}
+
+.draggable-list {
+  border: 1px solid #e3e5e4;
+  color: #34444f;
+  padding: 0;
+  list-style-type: none;
+}
+
+.draggable-list li {
+  background-color: white;
+  display: flex;
+  flex: 1;
+}
+
+.draggable-list li.right .persons-name {
+  color: #3ae374;
+}
+
+.draggable-list li.wrong .persons-name {
+  color: #ff3a3a;
+}
+
+.draggable-list li:not(:last-of-type) {
+  border-bottom: 1px solid #e3e5e4;
+}
+
+.draggable-list li.over .draggable {
+  background-color: #eaeaea;
+}
+
+.draggable-list li .number {
+  background-color: #c3c7ca;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.8rem;
+  height: 6rem;
+  width: 6rem;
+}
+
+.draggable-list li .persons-name {
+  margin: 0 2rem 0 0;
+  padding: 0;
+}
+
+.draggable-list li .draggable {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem;
+  flex: 1;
+}
+
+.check-btn {
+  background-color: #c3c7ca;
+  border: none;
+  color: #34444f;
+  font-size: 1.6rem;
+  padding: 1rem 2rem;
+  cursor: pointer;
+}
+
+.check-btn:active {
+  transform: scale(0.98);
+}
+
+.check-btn:focus {
+  outline: none;
+}
