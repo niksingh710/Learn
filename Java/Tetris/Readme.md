@@ -9,4 +9,4 @@ java -jar play.jar
 
 ## Preview
 
-![Here should be preview](https://github.com/niksingh710/learn/blob/master/java/Tetris/preview.png?raw=true)
+![Here should be preview](https://raw.githubusercontent.com/niksingh710/Learn/master/Java/Tetris/preview.png)
