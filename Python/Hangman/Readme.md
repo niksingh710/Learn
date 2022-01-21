@@ -12,4 +12,4 @@ python Hangman.py
 
 ## Preview
 
-![Here should be preview](https://github.com/niksingh710/learn/blob/master/Python/Minesweeper/preview.png)
+![Here should be preview](https://github.com/niksingh710/Learn/blob/master/Python/Hangman/preview.png?raw=true)
