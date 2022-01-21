@@ -19,7 +19,7 @@ If it run Without jdk 😁 Then its ur luck.
 1.`Just Double click the file with extesion .jar`
 
 ## Preview
-[This should be preview](https://github.com/niksingh710/learn/blob/master/java/Snake_2.O-master/Run/preview.png?raw=true)
+![This should be preview](https://github.com/niksingh710/learn/blob/master/java/Snake_2.O-master/Run/preview.png?raw=true)
 
 # Update
 Solved the issue regarding theme get hanged.
